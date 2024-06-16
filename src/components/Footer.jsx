@@ -1,7 +1,8 @@
 import styled from 'styled-components'
-import { FaXTwitter, FaInstagram, FaFacebookF } from 'react-icons/fa6';
+import { FaXTwitter, FaInstagram, FaFacebookF } from 'react-icons/fa6'
 
 import { colors } from '../styles/colors'
+import { getCurrentYear } from '../utils/utils'
 
 
 const StyledFooter = styled.footer`
@@ -19,7 +20,7 @@ const StyledFooter = styled.footer`
     align-items: center;
 
     a {
-      padding: 5px 8px;
+      padding: 2px 8px 6px 8px;
       margin: 5px;
       border: 2px solid ${colors.platinum};
       border-radius: 50px;
@@ -38,6 +39,7 @@ const StyledFooter = styled.footer`
 `
 
 const Footer = () => {
+  
   return (
     <StyledFooter>
       <div className='social-links'>
@@ -46,7 +48,7 @@ const Footer = () => {
         <a href='https://twitter.com/' target='_blank' role='button'><FaXTwitter /></a>
       </div>
       <div className='copyright'>
-        <span>© 2024 Ivan Sazdovski</span>
+        <span>© {getCurrentYear()} Ivan Sazdovski</span>
       </div>
     </StyledFooter>
   )

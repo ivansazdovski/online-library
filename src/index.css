@@ -4,13 +4,23 @@ html {
   padding: 0;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-weight: 400;
+  height: 100%;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 /* Global styles */
 .container {
+  /* width: 100%; */
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  /* padding: 0 50px; */
+  flex: 1;
 }
 
 
