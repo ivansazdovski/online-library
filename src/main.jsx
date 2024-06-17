@@ -8,22 +8,33 @@ import HomePage from './pages/HomePage'
 import ErrorPage from './pages/ErrorPage'
 import './index.css'
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import BooksProvider from './stores/BooksProvider'
+import MyList from './pages/MyListPage'
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <HomePage />,
-    errorElement: <ErrorPage />
+  },
+  {
+    path: "/myList",
+    element: <MyList />
+  },
+  {
+    path: "*",
+    element: <ErrorPage />
   },
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Header />
-    <div className='container'>
-      <RouterProvider router={router} />
-    </div>
-    <Footer />
+    <BooksProvider>
+      <Header />
+      <div className='container'>
+        <RouterProvider router={router} />
+      </div>
+      <Footer />
+    </BooksProvider>
   </React.StrictMode>,
 )
