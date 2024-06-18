@@ -1,5 +1,5 @@
 import { createContext, useContext, useState } from 'react'
-
+import booksDummyData from '../data/booksDummyData'
 
 const BooksContext = createContext()
 export const useBooksContext = () => useContext(BooksContext)
@@ -23,16 +23,16 @@ const BooksProvider = ({ children }) => {
     return likedBooks.some(book => book.id === bookId)
   }
 
-  const test123 = () => {
-    console.log('testing works provider')
+  const getBookDetails = (bookId) => {
+    return booksDummyData.find(book => book.id === bookId)
   }
 
   const contextValues = {
     likedBooks, setLikedBooks,
     addLikedBook,
     removeLikedBook,
-    test123,
-    checkIfLiked
+    checkIfLiked,
+    getBookDetails
   }
 
   return (

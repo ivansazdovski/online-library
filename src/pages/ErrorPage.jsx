@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
+
 import { colors } from '../styles/colors'
+import monsterErrorImg from '../assets/monsterErrorImg.png'
 
 const StyledWrapper = styled.div`
   max-width: 600px;
@@ -25,9 +27,9 @@ const StyledWrapper = styled.div`
 const ErrorPage = () => {
   return (
     <StyledWrapper>
-      <img src="src/assets/monsterErrorImg.png" />
+      <img src={monsterErrorImg} />
       <h1>Opps! Page Not Found.</h1>
-      <h4>You must have picked the wrong door because I haven't been able to lay my eye on the page you're searching for.</h4>
+      <h4>You must have picked the wrong door because I haven&apos;t been able to lay my eye on the page you are searching for.</h4>
       <Link to='/' className="btn btn-primary px-4">Go to home page</Link>
     </StyledWrapper>
   )

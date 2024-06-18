@@ -1,8 +1,9 @@
 import { Link, NavLink } from 'react-router-dom'
 import { Container, Nav, Navbar } from 'react-bootstrap'
 import styled from 'styled-components'
-import { colors } from '../styles/colors'
 
+import { colors } from '../styles/colors'
+import libraryLogo1 from '../assets/libraryLogo1.png'
 
 const StyledHeader = styled.header`
   padding: 0 50px;
@@ -41,7 +42,7 @@ const Header = () => {
   return (
     <StyledHeader>
       <StyledHeaderLeft>
-        <img src="src\assets\libraryLogo1.png" />
+        <img src={libraryLogo1} />
       </StyledHeaderLeft>
       <StyledHeaderRight>
         <a>Home</a>

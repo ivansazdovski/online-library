@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 import BookCard from '../components/BookCard'
-import { useBooksContext } from '../stores/BooksProvider'
 import booksDummyData from '../data/booksDummyData'
 
 
@@ -13,7 +12,6 @@ const StyledCardsContainer = styled.div`
 `
 
 const HomePage = () => {
-  const { test123 } = useBooksContext()
   console.log('books data', booksDummyData)
 
   return (

@@ -10,6 +10,7 @@ import './index.css'
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import BooksProvider from './stores/BooksProvider'
 import MyList from './pages/MyListPage'
+import BookDetails from './components/BookDetails'
 
 
 const router = createBrowserRouter([
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
   {
     path: "/myList",
     element: <MyList />
+  },
+  {
+    path: "/books/:bookId",
+    element: <BookDetails />
   },
   {
     path: "*",

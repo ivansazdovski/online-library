@@ -1,13 +1,13 @@
-import { Badge, Button, Card, OverlayTrigger, Tooltip } from 'react-bootstrap'
-import styled, { css } from 'styled-components'
+import { useEffect, useState } from 'react'
+import { Button, Card, OverlayTrigger, Tooltip } from 'react-bootstrap'
+import { FaHeart } from 'react-icons/fa'
+import { AiOutlineShoppingCart } from 'react-icons/ai'
+import styled from 'styled-components'
 
 import StarRating from './StarRating'
-import { FaHeart, FaShoppingCart } from 'react-icons/fa'
-import { CgMoreO } from "react-icons/cg";
-import { useEffect, useState } from 'react'
-import { AiOutlineShoppingCart } from "react-icons/ai";
-import { colors } from '../styles/colors';
-import { useBooksContext } from '../stores/BooksProvider';
+import { useBooksContext } from '../stores/BooksProvider'
+import { colors } from '../styles/colors'
+
 
 const StyledContainer = styled.div`
   .card {
@@ -43,7 +43,7 @@ const StyledContainer = styled.div`
     font-size: 24px;
     cursor: pointer;
     transition: color 0.3s ease;
-    color: ${(props) => (props.$liked === 'true' ? '#b53c31' : 'lightgray')};
+    color: ${(props) => (props.$liked === 'true' ? colors.red : 'lightgray')};
 
     &:hover {
       color: ${(props) => (props.$liked === 'true' ? 'darkred' : 'grey')};
@@ -72,7 +72,7 @@ const CartButton = styled(Button)`
 `
 
 const BookCard = ({ book }) => {
-  const { addLikedBook, removeLikedBook, checkIfLiked,  } = useBooksContext()
+  const { addLikedBook, removeLikedBook, checkIfLiked } = useBooksContext()
   const [isLiked, setIsLiked] = useState(false)
 
   useEffect(() => {
@@ -93,7 +93,7 @@ const BookCard = ({ book }) => {
   }
 
   const renderToolTip = (props) => {
-    const tooltipText = isLiked ? 'Remove from my list' : 'Add to my list'
+    const tooltipText = isLiked ? 'Remove from wishlist' : 'Add to wishlist'
     return (
       <Tooltip id="liked-tooltip" {...props}>
         {tooltipText}
@@ -108,7 +108,7 @@ const BookCard = ({ book }) => {
         <Card.Body>
           <Card.Title>
             <div className='d-flex justify-content-end' style={{ gap: '1rem' }}>
-              <span><StarRating rating={book.rating} /></span>
+              <span><StarRating rating={book.rating} size={18.5} /></span>
               <OverlayTrigger placement="bottom" overlay={renderToolTip}>
                 <span><FaHeart className="heart-icon" onClick={handleToggleLike} /></span>
               </OverlayTrigger>

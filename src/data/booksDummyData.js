@@ -15,7 +15,10 @@ const booksDummyData = [
       "rating": 4.2,
       "pages": 420,
       "publisher": "HarperCollins",
-      "yearPublished": 2021
+      "publicationDate": "March 5, 2022",
+      "weight": "420g",
+      "dimensions": "200 x 150 x 30 mm",
+      "isbn": "9781234567890"
     },
     {
       "id": "23e7fcbb-4e16-4c39-bd5c-df91485a19a3",
@@ -33,7 +36,10 @@ const booksDummyData = [
       "rating": 3.7,
       "pages": 565,
       "publisher": "Penguin Random House",
-      "yearPublished": 2020
+      "publicationDate": "June 12, 2023",
+      "weight": "350g",
+      "dimensions": "180 x 120 x 40 mm",
+      "isbn": "9782345678901"
     },
     {
       "id": "34fd7e35-2c1e-4d4b-8a37-73e2cf8a6bcf",
@@ -51,7 +57,10 @@ const booksDummyData = [
       "rating": 5.0,
       "pages": 350,
       "publisher": "Simon & Schuster",
-      "yearPublished": 2022
+      "publicationDate": "December 25, 2023",
+      "weight": "500g",
+      "dimensions": "250 x 170 x 50 mm",
+      "isbn": "9783456789012"
     },
     {
       "id": "4a3b9f2b-99d1-4b9d-9c3e-62c2f1a4e3d1",
@@ -69,7 +78,10 @@ const booksDummyData = [
       "rating": 0.5,
       "pages": 300,
       "publisher": "Penguin Classics",
-      "yearPublished": 1847
+      "publicationDate": "August 8, 2022",
+      "weight": "300g",
+      "dimensions": "160 x 130 x 35 mm",
+      "isbn": "9784567890123"
     },
     {
       "id": "5371d84e-97a2-4d54-8e9d-8d75bb3b7f53",
@@ -87,7 +99,10 @@ const booksDummyData = [
       "rating": 2.2,
       "pages": 280,
       "publisher": "MIT Press",
-      "yearPublished": 2018
+      "publicationDate": "April 15, 2024",
+      "weight": "450g",
+      "dimensions": "220 x 160 x 45 mm",
+      "isbn": "9785678901234"
     },
     {
       "id": "67d1b8b6-1c0f-4fb8-b6d5-4f1a5f08b9f1",
@@ -105,7 +120,10 @@ const booksDummyData = [
       "rating": 5.0,
       "pages": 450,
       "publisher": "Oxford University Press",
-      "yearPublished": 2017
+      "publicationDate": "January 1, 2023",
+      "weight": "380g",
+      "dimensions": "190 x 140 x 32 mm",
+      "isbn": "9786789012345"
     },
     {
       "id": "7b68f4b8-9eac-4b19-a6b4-d2f1e4f5d9c5",
@@ -123,7 +141,10 @@ const booksDummyData = [
       "rating": 2.0,
       "pages": 320,
       "publisher": "NASA Press",
-      "yearPublished": 2016
+      "publicationDate": "November 20, 2022",
+      "weight": "400g",
+      "dimensions": "210 x 155 x 38 mm",
+      "isbn": "9787890123456"
     },
     {
       "id": "8d9c6c8a-ef5f-451b-9f7b-2bcb3a4e7b45",
@@ -141,7 +162,10 @@ const booksDummyData = [
       "rating": 3.0,
       "pages": 290,
       "publisher": "Random House",
-      "yearPublished": 2021
+      "publicationDate": "September 10, 2023",
+      "weight": "480g",
+      "dimensions": "240 x 165 x 55 mm",
+      "isbn": "9788901234567"
     },
     {
       "id": "9e1b8d7f-c761-4b8d-8b3f-6a76d3f8bcb1",
@@ -159,7 +183,10 @@ const booksDummyData = [
       "rating": 4.0,
       "pages": 370,
       "publisher": "National Geographic",
-      "yearPublished": 2015
+      "publicationDate": "July 7, 2024",
+      "weight": "370g",
+      "dimensions": "200 x 145 x 33 mm",
+      "isbn": "9789012345678"
     },
     {
       "id": "ac5f4b8a-2c2d-47d8-8d8c-7c3e4d8a7b8c",
@@ -177,7 +204,10 @@ const booksDummyData = [
       "rating": 1.5,
       "pages": 410,
       "publisher": "Tech Press",
-      "yearPublished": 2019
+      "publicationDate": "December 5, 2023",
+      "weight": "380g",
+      "dimensions": "190 x 135 x 35 mm",
+      "isbn": "9785678901234"
     },
     {
       "id": "1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d",
@@ -195,7 +225,10 @@ const booksDummyData = [
       "rating": 1.0,
       "pages": 280,
       "publisher": "HarperCollins",
-      "yearPublished": 2020
+      "publicationDate": "May 18, 2022",
+      "weight": "430g",
+      "dimensions": "215 x 155 x 42 mm",
+      "isbn": "9780123456789"
     },
     {
       "id": "2b1a4d3c-5f6e-7b8a-9d0c-3e2f4b5a6c1d",
@@ -213,7 +246,10 @@ const booksDummyData = [
       "rating": 3.8,
       "pages": 340,
       "publisher": "Random House",
-      "yearPublished": 2019
+      "publicationDate": "February 28, 2023",
+      "weight": "420g",
+      "dimensions": "205 x 150 x 38 mm",
+      "isbn": "9789012345678"
     },
     {
       "id": "3c2b1d4a-6f5e-8b7a-0c9d-2f3e4b1a5c6d",
@@ -231,7 +267,10 @@ const booksDummyData = [
       "rating": 2.1,
       "pages": 400,
       "publisher": "Penguin Random House",
-      "yearPublished": 2021
+      "publicationDate": "October 10, 2023",
+      "weight": "380g",
+      "dimensions": "195 x 140 x 35 mm",
+      "isbn": "9783456789012"
     },
     {
       "id": "4d3c2b1a-6e5f-8a7b-0d9c-3f4e2b1c5a6d",
@@ -249,7 +288,10 @@ const booksDummyData = [
       "rating": 4.9,
       "pages": 320,
       "publisher": "HarperCollins",
-      "yearPublished": 2022
+      "publicationDate": "June 15, 2022",
+      "weight": "470g",
+      "dimensions": "225 x 160 x 50 mm",
+      "isbn": "9786789012345"
     },
     {
       "id": "5e4d3c2b-7f6e-9a8b-0c1d-2f3b4a5c6d1e",
@@ -267,7 +309,10 @@ const booksDummyData = [
       "rating": 4.3,
       "pages": 380,
       "publisher": "Sci-Fi Press",
-      "yearPublished": 2020
+      "publicationDate": "April 22, 2024",
+      "weight": "400g",
+      "dimensions": "220 x 150 x 40 mm",
+      "isbn": "9788901234567"
     },
     {
       "id": "6f5e4d3c-8b7a-0c9d-2f1e-4b5a6c1d3e2f",
@@ -285,7 +330,10 @@ const booksDummyData = [
       "rating": 3.3,
       "pages": 240,
       "publisher": "Sci-Fi Press",
-      "yearPublished": 2020
+      "publicationDate": "March 17, 2022",
+      "weight": "460g",
+      "dimensions": "230 x 155 x 48 mm",
+      "isbn": "9784567890123"
     },
     {
       "id": "2babc439-fd30-4586-855a-25849ed5ce84",
@@ -303,7 +351,10 @@ const booksDummyData = [
       "rating": 4.8,
       "pages": 317,
       "publisher": "Beacon Press",
-      "yearPublished": 2019
+      "publicationDate": "August 30, 2023",
+      "weight": "390g",
+      "dimensions": "200 x 145 x 32 mm",
+      "isbn": "9782345678901"
     },
 ]
 
