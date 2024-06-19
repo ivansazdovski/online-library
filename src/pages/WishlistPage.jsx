@@ -5,7 +5,7 @@ import { Button, Modal } from 'react-bootstrap'
 import { FaTrashAlt } from 'react-icons/fa'
 import { colors } from '../styles/colors';
 
-const MyList = () => {
+const WishlistPage = () => {
   const { likedBooks, removeLikedBook } = useBooksContext();
   const [showConfirmModal, setShowConfirmModal] = useState(false)
   const [selectedBookId, setSelectedBookId] = useState(null)
@@ -29,7 +29,6 @@ const MyList = () => {
 
   return (
     <div>
-      <h2>My List</h2>
       <table className="table mt-5">
         <thead>
           <tr>
@@ -74,4 +73,4 @@ const MyList = () => {
   );
 }
 
-export default MyList
+export default WishlistPage

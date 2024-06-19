@@ -4,16 +4,13 @@ import styled from 'styled-components'
 import BookCard from '../components/BookCard'
 import booksDummyData from '../data/booksDummyData'
 
-
 const StyledCardsContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
 `
 
-const HomePage = () => {
-  console.log('books data', booksDummyData)
-
+const BooksPage = () => {
   return (
     <div>
       <StyledCardsContainer>
@@ -21,11 +18,11 @@ const HomePage = () => {
           <BookCard
             key={book.id}
             book={book}
-            // img={book.coverImage}
-            // title={book.title}
-            // author={book.author}
-            // shortDescription={book.shortDescription}
-            // rating={book.rating}
+          // img={book.coverImage}
+          // title={book.title}
+          // author={book.author}
+          // shortDescription={book.shortDescription}
+          // rating={book.rating}
           />
         ))}
       </StyledCardsContainer>
@@ -34,4 +31,4 @@ const HomePage = () => {
   )
 }
 
-export default HomePage
+export default BooksPage

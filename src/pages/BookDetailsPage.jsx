@@ -6,7 +6,7 @@ import { RiCloseCircleFill } from 'react-icons/ri'
 import { AiOutlineShoppingCart } from 'react-icons/ai'
 import styled from 'styled-components'
 
-import StarRating from './StarRating'
+import StarRating from '../components/StarRating'
 import { useBooksContext } from '../stores/BooksProvider'
 import { colors } from '../styles/colors'
 
@@ -71,7 +71,7 @@ const CartButton = styled(Button)`
   }
 `
 
-const BookDetails = () => {
+const BookDetailsPage = () => {
   const { bookId } = useParams()
   const { getBookDetails } = useBooksContext()
   const [book, setBook] = useState({})
@@ -142,4 +142,4 @@ const BookDetails = () => {
   )
 }
 
-export default BookDetails
+export default BookDetailsPage
