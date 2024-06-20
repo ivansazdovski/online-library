@@ -1,5 +1,6 @@
-import { createContext, useContext, useState } from 'react'
+import { createContext, useCallback, useContext, useState } from 'react'
 import booksDummyData from '../data/booksDummyData'
+import axios from 'axios'
 
 const BooksContext = createContext()
 export const useBooksContext = () => useContext(BooksContext)
@@ -7,6 +8,7 @@ export const useBooksContext = () => useContext(BooksContext)
 
 const BooksProvider = ({ children }) => {
   const [likedBooks, setLikedBooks] = useState([])
+  const [activeUsers, setActiveUsers] = useState([])
 
   const addLikedBook = (book) => {
     setLikedBooks(prevBooks => [...prevBooks, book])
@@ -27,12 +29,24 @@ const BooksProvider = ({ children }) => {
     return booksDummyData.find(book => book.id === bookId)
   }
 
+  const getMostActiveUsers = useCallback(() => {
+    axios.get('https://reqres.in/api/users')
+      .then(response => {
+        console.log('response getMostActiveUsers', response.data.data)
+        setActiveUsers(response.data.data)
+      }).catch(error => {
+        console.log('error getMostActiveUsers', error)
+      })
+  }, [])
+
   const contextValues = {
     likedBooks, setLikedBooks,
     addLikedBook,
     removeLikedBook,
     checkIfLiked,
-    getBookDetails
+    getBookDetails,
+    getMostActiveUsers,
+    activeUsers, setActiveUsers
   }
 
   return (

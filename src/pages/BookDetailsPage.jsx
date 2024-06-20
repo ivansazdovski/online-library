@@ -58,16 +58,38 @@ const CartButton = styled(Button)`
   text-transform: uppercase;
   font-size: 12px;
   font-weight: 500;
-  cursor: disabledpointer;
   padding: 8px 12px;
   display: flex;
   align-items: center;
-  margin-top: 1em;
-
+  margin-top: 1rem;
+  
   svg {
     margin-right: 5px;
     font-size: 20px;
-    border-radius: 25px;
+  }
+`
+
+const WishlistButton = styled(Button)`
+  background-color: white;
+  border: 1px solid lightgray;
+  border-radius: 20px;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+  color: ${colors.blue3};
+
+  svg {
+    margin-right: 5px;
+    font-size: 16px;
+  }
+
+  &:hover, &:active {
+    background-color: ${colors.red} !important;
+    border: none;
   }
 `
 
@@ -99,9 +121,9 @@ const BookDetailsPage = () => {
             <CartButton disabled={!book.available}>
               <AiOutlineShoppingCart /> <span>Add to cart</span>
             </CartButton>
-            <CartButton style={{ backgroundColor: 'white', border: '1px solid lightgray', color: colors.blue3}}>
+            <WishlistButton>
               <FaHeart /> <span>Add to wishlist</span>
-            </CartButton>
+            </WishlistButton>
           </div>
         </div>
 
